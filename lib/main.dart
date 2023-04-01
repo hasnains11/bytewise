@@ -1,6 +1,5 @@
+import 'package:bytewise/task7/myProfile.dart';
 import 'package:bytewise/task8/database.dart';
-import 'package:bytewise/task8/todoApp.dart';
-import 'package:bytewise/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: TodoApp());
+    return MaterialApp(home: MyProfile());
     // return MaterialApp(
     //   title: 'Flutter Demo',
     //   theme: ThemeData(
