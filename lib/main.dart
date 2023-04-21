@@ -2,6 +2,7 @@ import 'package:bytewise/task5_6/RecipeList.dart';
 import 'package:bytewise/task7/myProfile.dart';
 import 'package:bytewise/task8/database.dart';
 import 'package:bytewise/task8/todoApp.dart';
+import 'package:bytewise/task9/task9.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TodoApp(),
+      home: TweenAnimation(),
     );
     // return MaterialApp(
     //   title: 'Flutter Demo',
