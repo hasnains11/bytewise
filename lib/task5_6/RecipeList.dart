@@ -1,5 +1,5 @@
-import 'package:bytewise/task5/recipeCard.dart';
-import 'package:bytewise/task5/recipeDetails.dart';
+import 'package:bytewise/task5_6/recipeCard.dart';
+import 'package:bytewise/task5_6/recipeDetails.dart';
 import 'package:flutter/material.dart';
 
 class RecipeList extends StatelessWidget {

@@ -17,8 +17,10 @@ class _TodoAppState extends State<TodoApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[500],
       appBar: AppBar(
         title: const Text('Todo App'),
+        backgroundColor: Colors.blueGrey,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -26,10 +28,13 @@ class _TodoAppState extends State<TodoApp> {
         },
         child: const Icon(Icons.add),
       ),
-      body: Center(
-          child: TodoList(
-        key: _childKey,
-      )),
+      body: Container(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+            child: TodoList(
+          key: _childKey,
+        )),
+      ),
     );
   }
 

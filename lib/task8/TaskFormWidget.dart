@@ -32,7 +32,33 @@ class _TaskFormState extends State<TaskForm> {
         children: [
           TextFormField(
             initialValue: _title,
-            decoration: InputDecoration(labelText: 'Title'),
+            decoration: InputDecoration(
+              labelText: 'Title',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.blue,
+                  width: 2.0,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.red,
+                  width: 2.0,
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.grey[300]!,
+                  width: 2.0,
+                ),
+              ),
+            ),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter a title';
@@ -43,9 +69,36 @@ class _TaskFormState extends State<TaskForm> {
               _title = value!;
             },
           ),
+          SizedBox(height: 20),
           TextFormField(
             initialValue: _description,
-            decoration: InputDecoration(labelText: 'Description'),
+            decoration: InputDecoration(
+              labelText: 'Description',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.blue,
+                  width: 2.0,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.red,
+                  width: 2.0,
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: Colors.grey[300]!,
+                  width: 2.0,
+                ),
+              ),
+            ),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter a description';
@@ -56,6 +109,7 @@ class _TaskFormState extends State<TaskForm> {
               _description = value!;
             },
           ),
+          SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
@@ -67,7 +121,18 @@ class _TaskFormState extends State<TaskForm> {
                 }
               }
             },
-            child: Text(widget.initialData == null ? 'Add' : 'Update'),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue,
+              onPrimary: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 2.0,
+            ),
+            child: Text(
+              widget.initialData == null ? 'Add' : 'Update',
+              style: TextStyle(fontSize: 16.0),
+            ),
           ),
         ],
       ),

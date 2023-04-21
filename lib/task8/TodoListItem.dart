@@ -21,6 +21,9 @@ class TodoListItem extends StatelessWidget {
       key: UniqueKey(),
       onDismissed: (_) => onRemove(),
       child: ListTile(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
         leading: Checkbox(
           value: isCompleted,
           onChanged: (value) => onIsCompleted(),
@@ -32,6 +35,7 @@ class TodoListItem extends StatelessWidget {
             fontSize: 18,
             decoration:
                 isCompleted ? TextDecoration.lineThrough : TextDecoration.none,
+            color: isCompleted ? Colors.grey[400] : Colors.black,
           ),
         ),
         subtitle: Text(
@@ -50,6 +54,7 @@ class TodoListItem extends StatelessWidget {
           ),
           onPressed: onRemove,
         ),
+        tileColor: isCompleted ? Colors.grey[200] : Colors.white,
       ),
     );
   }
